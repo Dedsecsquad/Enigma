@@ -7,7 +7,7 @@ public class Portal : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Player>() != null)
+        if (other.GetComponent<PlatformerCharacterController>() != null)
         {
             int index = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(index + 1);
