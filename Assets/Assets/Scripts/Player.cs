@@ -26,22 +26,22 @@ public class Player : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0f, 270f, 0f), 10f * Time.deltaTime);
         }
-        //_animator.SetBool("isRunning", Mathf.Abs(horizontal) > 0.05f);
+        _animator.SetBool("isRunning", Mathf.Abs(horizontal) > 0.05f);
 
         //vertical movement
         bool isGrounded = Physics.CheckSphere(_groundCheck.position, 0.1f, _groundMask);
         if (isGrounded && _velocity.y < 0f)
         {
             _velocity.y = -2f;
-            //_animator.SetBool("isGrounded", true);
+            _animator.SetBool("isGrounded", true);
         }
 
         _velocity.y += _gravity * Time.deltaTime;
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             _velocity.y = Mathf.Sqrt(_jumpHight * -2f * _gravity);
-            //_animator.SetTrigger("jump");
-            //_animator.SetBool("isGrounded", false);
+            _animator.SetTrigger("jump");
+            _animator.SetBool("isGrounded", false);
             _audioSource.Play();
         }
 
