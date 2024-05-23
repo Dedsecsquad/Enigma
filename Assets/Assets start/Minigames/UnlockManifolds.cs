@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class UnlockManifolds : MonoBehaviour
 {
 
@@ -36,7 +36,8 @@ public class UnlockManifolds : MonoBehaviour
             button.image.color = Color.green; // set color to green
             if (counter == 10) // check if all buttons are pressed already
             {
-                StartCoroutine(presentResult(true)); // present result for winning
+                int index = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(index + 1);
             }
         }
         else
