@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Assets start/Minigames/Maybe.unity
     guid: c0a6405a7df41c649803ed32190cc57c
   - enabled: 1
-    path: Assets/Assets/Scenes/Level 4.unity
-    guid: dbd5700ccca76af479dd1c693eb7c373
+    path: Assets/Assets/Scenes/Level 2.unity
+    guid: 4de63429d6668204d8c321a8ebb9e4db
   - enabled: 1
     path: Assets/Assets/Scenes/EndGame.unity
     guid: 558d6e5facd55d24c97a8ec99f35c544
